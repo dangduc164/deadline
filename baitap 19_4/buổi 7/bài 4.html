@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<script type="text/javascript">
+	function thuchien() {
+		// body... 
+		var a = document.getElementById("soa").value;
+		var result=1;
+		var fracNumer = '';
+		var fracString = '';
+		var resultString = '';
+		if (a == '') 
+		{
+			alert("bạn chưa nhập dữ liệu!");
+			exit();
+		}
+		else if(a == 1|| a == 0) {
+			document.getElementById('ketqua').innerText = a + "! = " +a;
+		}
+		else {
+			for(var i =1; i <= a; i++)
+			{
+				if(i < fracNumer) {
+					fracNumer += i;
+				}
+				else{
+					fracString += i+ ' x ';
+				}
+				result *= i;
+            
+			}
+			document.getElementById('ketqua').innerText = a + "! = " + fracNumer + fracString + " = " + result;
+		}
+	}
+	</script>
+<body>
+	<form>
+		<label>nhập số a:<br>
+			<input type="text" id="soa" value="" required>
+		</label>
+		<br><br>
+		<input type="button" value="tính giai thừa"  style="background-color: aqua" onclick="thuchien()"><a style="color: #fff">tính giai thừa</a>
+ 		<div id="ketqua"></div>
+	</form>
+
+</body>
+</html>

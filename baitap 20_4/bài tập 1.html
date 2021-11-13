@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>bài 1</title>
+</head>
+<script type="text/javascript">
+	function tính () {
+		// body... 
+		var a = document.getElementById("cdai").value;
+		var b = document.getElementById("crong").value;
+		var cvi = (Number(cdai.value)+Number(crong.value))*2;
+		var dt = Number(cdai.value)*Number(crong.value);
+		if (a == '' || b == '') 
+			{
+				alert("bạn không được để trống!");
+				exit();
+			} 
+		else if(isNaN(a)||isNaN(b))
+			{
+				alert("chỉ được nhập số!")
+				exit();
+			}
+			document.getElementById('ketqua').innerText = "chu vi = " + cvi + "m ";
+			document.getElementById('ketqua1').innerText = "diện tích = " + dt;
+	}
+</script>
+<body>
+	<table border="1px" align="center">
+		<tr>
+			<td align="center" bgcolor="yellow" style="color: "><h2>Chu vi hình chữ nhật</h2></td>
+		</tr>
+		<tr>
+			<div id="Alert"></div>
+			<td>Nhập  vào chiều dài(đơn vị met):<br>
+				<input type="text" id="cdai"><br><br>
+				Nhập  vào chiều rộng(đơn vị met):<br>
+				<input type="text" id="crong"><br><br>
+				<input style="background-color: #339900" type="button" name="" value="tính chu vi và diện tích hcn" onclick="tính()">
+				<br><br>
+					<div style="color: #0099FF" id="ketqua"></div><br>
+					<div style="color: #0099FF" id="ketqua1"></div><br>
+
+				
+			</td>
+
+		</tr>
+		
+	</table>
+
+</body>
+</html>

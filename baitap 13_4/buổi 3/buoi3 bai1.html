@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<form>
+	<h1><b>Thanh toan</b></h1>
+    <label>
+    	<b>Tên đầy đủ </b><input type="text" required="text" placeholder="Nhập tên đầy đủ người mua hàng" />
+    </label><br /><br />
+    <label><b>Password <input type="password" required="password" placeholder="Nhập password"/></b></label><br /><br />
+     <label><b>Email </b><input type="email" required="email" name="email" /></label><br /><br />
+    <label><b>Ngày sinh </b><input type="date" required="date" name="ddate" /></label><br /><br />
+     <label><b>Mặt hàng mua </b>
+     		<input type="text_ide" list="ide" />
+     	 <datalist id="ide">
+        	<option value="Shoes"></option>
+            <option value="Socks"></option>
+            <option value="Shirt"></option>
+            <option value="Sandals"></option>
+            <option value="Trousers"></option>
+        </datalist>
+     </label><br /><br />
+      <label><b>Số lượng </b><input type="number" min="1" max="5" /></label><br /><br />
+      <label><b>Bán kính vận chuyển </b><input type="range" min="10" max="20" /></label><br /><br />
+      <input type="button" name="dk" value="Đăng ký" />
+</form>
+	
+</body>
+</html>

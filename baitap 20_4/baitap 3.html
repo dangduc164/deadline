@@ -1,0 +1,50 @@
+<doctype html >
+< html >
+< đầu >
+< meta  charset = " utf-8 " >
+< title > Tài liệu không có tiêu đề </ title >
+	< script >
+		hàm  send ( )
+		{
+			var  n  =  tài liệu . getElementById ( 'tên' ) . giá trị ;
+			var  e  =  tài liệu . getElementById ( 'email' ) . giá trị ;
+			var  thong  =  / @ / ;
+			if ( n == null  ||  n == "" )
+				{
+					alert ( "bạn chưa nhập tên! Mời bạn nhập lại!" ) ;
+				}
+			else  if  ( ! thong . test ( email . value ) )  {
+        		alert ( 'Hay nhap dia chi email hop le' ) ;
+        		thư điện tử . tiêu điểm ;
+        		trả về  sai ; }
+			khác  {
+				/ * var html = '<div>' + "tên:" + n + '</div>';
+				document.getElementById ('result1'). insertAdjacentHTML ('afterend', html);
+				var html = '<div>' + "Email:" + e + '</div>';
+				document.getElementById ('result2'). insertAdjacentHTML ('afterend', html); * /
+				tài liệu . getElementById ( 'result1' ) . innerText =  "tên:"  +  n ;
+				tài liệu . getElementById ( 'result2' ) . innerText =  "Email:"  +  e ;
+				tài liệu . getElementById ( 'colect' ) . innerText =  "quốc gia" ;
+			}
+			
+		}
+	</ script >
+</ head >
+
+< body >
+	< Label > Name: < input  loại = " text " id =" tên " giá trị ="" > </ label > < BR >
+	< Label > Email: < input  loại = " text " id =" email " giá trị ="" > </ label > < BR >
+	< label > Quốc gia
+		< select  id = " colect " >
+			< option > Select-Country </ option >
+			< option > Việt Nam </ option >
+			< option > Japan </ option >
+			< option > USA </ option >
+		</ select >
+	</ Label > < BR >
+	< input  type = " button " onClick = " send (); " value = " Gửi thông tin " >
+	< div  id = " result1 " > </ div >
+	< div  id = " result2 " > </ div >
+	< div  id = " result3 " > </ div >
+</ body >
+</ html >

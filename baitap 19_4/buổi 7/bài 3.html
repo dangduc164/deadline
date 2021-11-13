@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+	<script type="text/javascript">
+		function thuchien() {
+			// body... 
+		var a = document.getElementById("so1").value;
+		var b = document.getElementById("so2").value;
+		var c = document.getElementById("so3").value;
+		var Min;
+		var Max;
+		if (a == ''|| b == ''|| c == '')
+		    {
+		    	alert("bạn chưa nhập đủ 3 số!");
+		    	exit();
+		    }
+		Min = Math.min(a,b,c);
+		Max = Math.max(a,b,c);
+		document.getElementById('ketqua').innerText = "Số lớn nhất = " + Max;
+		document.getElementById('ketqua_1').innerText = "Số nhỏ  nhất = " + Min;
+		}
+		
+	</script>
+<body>
+	<form>
+		<h1>Tìm min-max</h1>
+		<tr>
+			<td>Nhập số thứ 1 vào:</td><br>
+			<td><input type="Number" id="so1"></td><br>
+		</tr>
+		<tr>
+			<td>Nhập số thứ 2 vào:</td><br/>
+			<td><input type="Number" id="so2"></td><br>
+		</tr>	
+		<tr>
+			<td>Nhập số thứ 3 vào:</td><br/>
+			<td><input type="Number" id="so3"></td><br>
+		</tr>
+		<br>
+		<tr>
+			<td>
+				<input type="button" value="Hiển thị Min - Max"  style="background-color: aqua" onclick="thuchien()"><a style="color: #fff">Hiển thị Min-Max</a>
+			</td><br><br>
+			<div id="ketqua" style="color: blue"></div>
+			<div id="ketqua_1" style="color: blue"></div>
+		</tr>
+	</form>
+</body>
+</html>

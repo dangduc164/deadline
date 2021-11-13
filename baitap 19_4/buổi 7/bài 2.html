@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+	<script type="text/javascript">
+		function thuchien() {
+			// body... 
+		var a = document.getElementById("soa").value;
+		var b = document.getElementById("sob").value;
+		var x;
+		if (a == ''|| b == '')
+		    {
+		    	alert("bạn không được để trống!");
+		    	exit();
+		    }
+		else if (a == 0) {
+		    	document.getElementById('ketqua').innerText = "phương trình vô nghiệm!";
+		    	exit();
+		    }
+		else if(b == 0) {
+			document.getElementById('ketqua').innerText = "phương trình có vô số nghiệm!";
+			exit();
+			}
+		else{
+			x = (-b)/a;
+
+			}
+        document.getElementById('hien').innerText = a +"x"+ "+" + b +"= 0";
+        document.getElementById('ketqua').innerText = "x = "+x;
+		}
+	</script>
+<body>
+	<form>
+        <h2>Phương trình bâc nhất</h2>
+		<tr>
+			<td>Nhập  hệ số a vào:</td><br>
+			<td><input type="Number" id="soa"></td><br>
+		</tr>
+		<tr>
+			<td>Nhập  hệ số b vào:</td><br/>
+			<td><input type="Number" id="sob"></td><br>
+		</tr>
+		<tr>
+			<td>phương trình có dạng:<br><br>
+                <div id="hien" style=" color: blue"></div>
+
+			</td>
+		</tr>
+		<br>
+		<tr>
+			<td>
+				<input type="button" value="tìm x"  style="background-color: aqua" onclick="thuchien()"><a style="color: #fff">tìm x</a>
+			</td><br><br>
+			<div id="ketqua" style="color: blue"></div>
+		</tr>
+	</form>
+</body>
+</html>

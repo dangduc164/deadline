@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>bài 2</title>
+</head>
+<script type="text/javascript">
+	function thuchien(){
+		// body... 
+		var fracNumber = document.getElementById('soa').value;
+		var chan ='';
+		var le = '';
+		if (fracNumber=='') {
+			alert("bạn chưa nhập dữ liệu!");
+			exit();
+			for (var i = 1; i <= fracNumber; i++) {
+				if (fracNumber % 2 == 0) {
+					chan = fracNumber+ i;
+
+				}
+				else{
+					le = le+i;
+				}
+			}
+		}
+		document.getElementById('ketqua').innerText = + chan +" số chẵn";
+		document.getElementById('ketqua1').innerText = "số lẻ";
+	}
+	
+</script>
+<body>
+	<form>
+		<label>nhập số a</label><br><br>
+		<label><input type="number" id="soa"></label><br><br>
+		<input style="background-color: #00FF00" type="button" value="kết quả" onclick="thuchien()"><br>
+		<label id="ketqua"></label><br>
+		<label id="ketqua1"></label>
+	</form>
+
+</body>
+</html>

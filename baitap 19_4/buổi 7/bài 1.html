@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<script type="text/javascript">
+	function thuchien() {
+		// body... 
+		var a = document.getElementById("soa").value;
+		var b = a.trim();
+		if (b== '') 
+		{
+			alert("bạn chưa nhập dữ liệu!");
+			exit();
+		} 
+		else if (b >=5 && b <= 10)
+		 {
+		 	document.getElementById('ketqua').innerText = b + " nằm trong khoảng 5-10!";
+		 	exit();
+		 }
+		 else if(b >= 20 && b <= 100)
+		 {
+		 	document.getElementById('ketqua').innerText = b + " nằm trong khoảng 20-100!";
+		 	exit();
+		 }
+		 else {
+		 	document.getElementById('ketqua').innerText = b + " không nằm trong khoảng 5-10 hoặc 20-100!";
+		 	exit();
+		 }
+		 
+	}
+	</script>
+<body>
+	<form>
+		<label>nhập số a:<br>
+			<input type="text" id="soa" value="" required>
+		</label>
+		<br><br>
+		<input type="button" value="kiểm tra"  style="background-color: aqua" onclick="thuchien()"><a style="color: #fff">kiểm tra</a>
+ 		<div id="ketqua"></div>
+	</form>
+
+</body>
+</html>
